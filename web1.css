@@ -2,378 +2,213 @@
 @import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Poppins:wght@400;500&family=Roboto+Mono&display=swap');
 
 *{
-    box-sizing: border-box; /*taşma olmasın diye*/
-    border: 0;
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto Mono', monospace;
-}
- 
-a{
-    text-decoration: none;/*altı çizili olmasın*/
-    outline: none;/*üstüne basıldığında kenarlık çıkmasın*/
-    border: none;
-} 
-ul , li{
-    list-style: none;/*madde işareti olmasın*/
-    margin: 0;
-    padding: 0;
+    font-family: montserrat;
 }
 
-.container{
-    padding: 0 5px;
-    margin: 0 auto;
-    max-width: 950px;
+.section-padding {
+    padding: 100px 0;
 }
-.header{
-    
-    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(https://images.unsplash.com/photo-1511447333015-45b65e60f6d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=955&q=80);
-    background-size: cover;
-    background-position: center;
-    height: 100vh; /*resim sayfayı komple kaplsaın diye*/
+.carousel-item{
+    height: 100vh;
+    min-height: 300px;
 }
-
-h2{
-    color:#aa66b3 ; /*tüm h2 ler için*/
-    position: relative;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
+.carousel-caption{
+    bottom: 220px;
+    z-index: 2;
 }
-
-h2:after{
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 4px;
-    width: 50px;
-    border-radius: 2px;
-    background-color: #aa66b3;
+.carousel-caption h5{
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
 }
-.logo{
-    letter-spacing: 2.5px;
-    font-size: 25px;
-}
-.navbar{
-    display:flex;/*yatayda yan yana */
-    align-items:center; /*yatay ve dikeyde ortaladı*/
-    justify-content: space-between; /* araya boşluk*/
-    padding: 45px 0;
+.carousel-caption p{
+    width: 60%;
     margin: auto;
-    color: rgb(208, 132, 238);
-}
-ul{
-    display: flex;
-}
-li{
-    margin-right: 22px;
-}
-a{
-    color:rgb(216, 161, 238);
-    font-size: 23px;
-    font-weight: bold;
-    position: relative;
-}
-
-.menu-link:after{
-   content: " ";
-   position: absolute;
-   background-color:rgb(216, 162, 238) ;
-   height: 3px;
-   width: 0;
-   left: 0;
-   bottom: -10px;
-   transition: .3s;
-}
-.menu-link:hover:after{
-width: 100%;
-}
-.metin{
-    position: absolute;
-    top: 53%;
-    left: 50%;
-    transform: translateX(-50%);
-    color: rgb(211, 150, 235);
-    display: flex;
-    align-items: center; /*dikeyde ortalar*/
-    justify-content: center;/*yatayda ortalar*/
-    flex-direction: column; /*iki başlığın alt alta olması için*/
-}
-h1{
-   
-    font-size: 120px;
-    font-weight: 95;
-    line-height: 0.4;
-    letter-spacing: 2px;
-    font-family: 'Italianno', cursive; 
-}
-h3{
-    font-size: 30px;
+    font-size: 18px;
+    line-height: 1.9;
 
 }
-
-/*about kısmı*/
-
-
-.about{
+.carousel img{
     width: 100%;
-    padding: 50px 0px;
-    background-color: rgb(1, 0, 7);
-    
+    height: auto;
 }
-.about-container{
-    width: 1000px;
-    margin: 50px auto ;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+.carousel-inner::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1;
+
 }
-.about img{
-    padding-right: 60px;
-    height: 450px;
-    width: 500px;
-    
-}
-.about-text{
-    width: 500px;
-}
-.about-text h2{
-    text-align: center;
-    margin:40px 0px ;
-}
-    .about-text h5{
-        position: relative;
-        color: #b99fb4;
-        font-size: 15px;
-        margin-bottom: 25px;
-        letter-spacing: 2px;
-    }
-.about-text span{
-    color: #462b49;
-}
-.about-text p{
-    letter-spacing: 2px;
-    color: #aa66b3;
-    line-height: 27px;
-    margin-bottom: 45px;
+.navbar-nav a{
     font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
 }
-.head5:after{
-    content: " ";
-   position: absolute;
-   background-color:rgb(200, 137, 224) ;
-   height: 1.5px;
-   width: 25%;
-   left: 0;
-   bottom: -10px;
+.navbar-light .navbar-brand{
+    color: #000;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
 }
 
+ .navbar-light .navbar-brand:focus,
+.navbar-light .navbar-brand:hover{
+    color: #000;
+}
+.navbar-light .navbar-nav .navbar-link{
+    color: #000;
+}
+.portfolio.card{
+    box-shadow: 15px 15px 40px , rgba(0, 0, 0, 0.15);
+}
 
-/*lessons kısmı*/
-.lessons{
-    background-image: linear-gradient(rgba(0,0,0,0.90),rgba(0,0,0,0.90)),url(https://images.unsplash.com/photo-1613327986042-63d4425a1a5d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80 )  ;
-  background-repeat: no-repeat;
-  background-size: cover;
-    background-color: #000000;
-    display: grid;
-    height: 100%;
-    place-items: center;
+.w-100{
+    height: 100vh;
+}
+.about-1{
+margin: 30px;
+padding: 5px;
+
+}
+.about-1 h2{
+    text-align: center;
+    color: #000;
     
 }
-.lessons h2{
-    margin-top: 100px;
-}
-.lessons-bar{
-    margin: 90px;
-    width: 600px;
-    background: #15022b;
-    border-radius: 10px;
-    padding: 20px 30px;
-}
 
-.lessons-bar .bar{
-    margin: 20px 0;
-}
-.bilgi{
-    margin-bottom: 5px;
-    color: #b3a5b0;
-}
- .bilgi span{
-    font-size: 20px;
-    font-weight: 500;
+.about-item{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: rgb(43, 42, 42);
+    padding: 80px 30px;
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.6);
 
 }
- .bar .line{
-    position: relative;
-    height: 10px;
+
+.about-item h3{
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: #e6d710;
+}
+.about-item hr{
+    width: 46px;
+    height: 4px;
+    background-color: #e6d710;
+    margin: 0 auto;
+    border: nome;
+}
+
+.about-item p{
+    margin-top: 20px;
+     color: #fff;
+}
+
+.about-item:hover{
+    background-color: #0a0a0a;
+}
+.progress-title{
     width: 100%;
-    background: #c4b2c0;
-    border-radius: 5px;
-    transform: scaleX(0);
-    transform-origin: left;
-    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
-   
+    height: auto;
+}
+.progress-title h3{
+ font-size: 18px;
+ font-weight: 700;
+ color: rgb(17, 17, 17);
+ margin: 0 0 20px;
+}
+.progress{
+    height: 20px;
+    background: #171b3c;
+    border-radius: 20px;
+    border: 1px solid #000;
+    box-shadow: 0 2px 2px #4f4c4c;
+    margin-bottom: 40px;
+    overflow: visible;
+    position: relative;
 }
 
-.bar .line span{
-    animation: animate 1s  cubic-bezier(1,0,0.5,1) forwards;
-    transform-origin: left;
-    transform: scaleX(0);
-height: 100%;
-width: 80%;
-position: absolute;
-background:rgb(185, 81, 226);
-border-radius: 10px;
+.progress .progress-bar{
+border-radius: 20px;
+border: 1px solid #000;
+animation: animate-positive 2s;
 }
 
-@keyframes animate{
-    100%{
-        transform :scaleX(1);
+
+@media only screen and(min-width:768px) and (max-width:991px){
+  .carousel-caption{
+      bottom: 370px;
+  }
+  .carousel-caption p{
+      width: 100%;
+  }
+}
+@media only screen and(max-width:767px){
+    .navbar-nav{
+        text-align: center;
+    }
+    .carousel-caption{
+        bottom: 125px;
+    }
+    .carousel-caption h5{
+        font-size: 17px;
+        
+    }
+    .carousel-caption a{
+        padding: 10px 15px;
+    }
+    .carousel-caption p{
+        width: 100%;
+        line-height: 1.6;
+        font-size: 12px;
     }
 }
-.line.html span{
-    width: 80%;
-}
-.line.c span{
-    width: 85%;
-}
-.line.css span{
-    width: 85%;
-}
-.line.javascript span{
-    width: 65%;
-}
+ .progress-title{
+     width: 100%;
+     height: auto;
+ }
+ .progress-title h3{
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  margin: 0 0 20px;
 
-.bar .line span:before{
-    position: absolute;
-    content: "";
-    right: 0;
-    top: -8px;
-    height: 0;
-    width: 0;
-    border: 7px solid transparent;
-    border-right-width: 0px;
-    border-left-width:0px ;
-    border-top-color: #000;
+ }
+ .progress{
+     height: 20px;
+     
+     border-radius: 20px;
 
-}
-
-
-.bar .line span::after{
-    position: absolute;
-    
-    right: 0;
-    top: -24px;
-    color: rgb(241, 231, 247);
-    font-size: 12px;
-    font-weight: 500;
-    padding: 1px 8px;
-    background: #000;
-   border-radius: 2px;
-
-}
-
-.line.html span:after{
-    content: "80%";
-}
-.line.c span:after{
-    content: "85%";
-}
-.line.css span:after{
-    content: "85%";
-}
-.line.javascript span:after{
-    content: "65%";
-}
-
-/*contact kısmı*/
-*contact{
-    width: 100%;
-    height: 100%;
-    
-}
-.contact-içerik{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    padding: 100px 100px;
-}
-
-.contact-içerik:after{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000000;
-    background-size: cover;
-    z-index: -1;
-    
-    
-}
-.contact-kutu{
-    max-width: 850px;
-    display: grid; /*satırlar için*/
-    grid-template-columns: repeat(2,1fr); /*satırların kaç defa tekrarlanacağı ve boyutları*/
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color:#11061d;
-   
-    border-radius: 10px;
-}
-.sol{ /*resim için*/
-    background-image :linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),url(https://images.unsplash.com/photo-1480506132288-68f7705954bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=920&q=80)  ;
-    height: 100%;
-    background-size :cover;
-   
-
-}
-.sag{
-    padding: 25px 40px;
-}
-
-.alan{
-    width: 100%;
-    padding: 0.5rem 1rem;
-    outline: none;
-    
-    background-color: rgba(100, 77, 99, 0.6);
-    font-size: 1.1rem;
-    margin-bottom: 22px;
-    transition: .3s;
-
-}
-.alan:hover{
-    background-color: rgba(82, 47, 83, 0.1);
-}
-.alan:focus{
-    background-color: rgb(82, 50, 87);
-    border: 2px ;
-}
-
-.button{
-    width: 100%;
-    padding: 8px 16px;
-    font-size: 1.1rem;
-    background-color:rgba(168, 134, 167, 0.6) ;
-    cursor: pointer;
-    color: rgb(158, 141, 168);
-outline: none;
-border: none;
-transition: .3s;
-}
-.button:hover{
-    background-color: rgba(29, 9, 39, 0.45);
-
-}
-
-
-
-
-
+     border: 1px  ;
+     box-shadow: 0 2px 2px #4f4c4c;
+     margin-bottom: 40px;
+     overflow:visible;
+     position: relative;
+ }
+ .progress .progress-bar{
+     border-radius: 20px;
+     border: 1px ;
+     animation: animate-positive 2s;
+ }
+ 
+  .progress-value{
+      color: #000;
+  }
+ @-webkit-keyframes animate-positive{
+     0%{
+         width: 0;
+     }
+ }
+ @keyframes animate-positive{
+     0%{
+         width: 0;
+     }
+ }
+ #portfolio .card-title{
+   color: #000;
+ }
